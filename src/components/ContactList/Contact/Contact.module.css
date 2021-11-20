@@ -1,0 +1,25 @@
+.itemContact {
+  padding: 10px 30px;
+  background: rgb(223, 242, 238);
+  border-bottom: 1px solid grey;
+  color: #506a6b;
+  font-size: 20px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.itemSpanContent {
+  padding: 25px;
+  font-size: 17px;
+  margin-right: 25px;
+}
+.button {
+  margin: 30px auto;
+  padding: 5px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background: rgb(63, 82, 122);
+  font-weight: 17px;
+}

@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+.filterForm {
+  max-width: 350px;
+  margin: 50px auto 0;
+  padding: 20px;
+  background: rgb(63, 82, 122);
+  font-family: 'Oswald', sans-serif;
+}
+.filterGrup {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgb(223, 242, 238);
+}
+.filterGrupInput,
+.filterGrupLabel {
+  display: block;
+  width: 100%;
+}
+.filterGrupInput {
+  padding: 0;
+  line-height: 30px;
+  background: #fff;
+  border-width: 0;
+}
+.filterGrupLabel {
+  margin-bottom: 5px;
+  color: rgb(63, 82, 122);
+  text-transform: uppercase;
+  font-size: 12px;
+}
