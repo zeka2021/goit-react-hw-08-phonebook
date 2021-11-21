@@ -1,14 +1,18 @@
-import  { useState } from 'react';
-import { useCreateContactMutation } from '../../redux/contactSlice'; 
+import  { useState, useEffect } from 'react';
+import { useAddContactMutation } from '../../redux/contactSlice';
+import { useCurrentQuery } from '../../redux/authApi'; 
 
 import s from './ContactForm.module.css';
 
 function ContactForm({contacts}) {
+  const { refetch } = useCurrentQuery();
+  const [addContact] = useAddContactMutation();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  // const contacts = useSelector(state => state.contacts.items);
-  // const dispatch = useDispatch();
-  const [createContact] = useCreateContactMutation();
+
+  useEffect(() => {
+    refetch();
+  }, [contacts, refetch]);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -39,7 +43,7 @@ function ContactForm({contacts}) {
       return;
     }
 
-    createContact({ name, number });
+    addContact({ name, number });
     reset();
   };
 
